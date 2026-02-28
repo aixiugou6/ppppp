@@ -1,0 +1,12 @@
+services:
+  claude-opus:
+    image: leokun123/puter2api:1.0.6
+    container_name: claude-opus
+    dns:
+      - 8.8.8.8
+      - 114.114.114.114
+    restart: always
+    volumes:
+      - ./db2.db:/data/puter2api.db
+    ports:
+      - "8081:8081"
